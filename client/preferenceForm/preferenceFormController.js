@@ -61,7 +61,6 @@ angular.module('menuApp')
 
   $scope.changeNutritionValue = function(){
     if($scope.nutritionValue){
-      console.log('HADFHHADFHASDFH');
       $scope.nutritionPreferences[$scope.selectedNutrition] = $scope.nutritionValue;
     }
   }
@@ -105,7 +104,6 @@ angular.module('menuApp')
 
 
   $scope.sendPreferenceData = function(){
-    console.log('LOLOLOLO HI');
     var preferenceData = {
       tastepreference: $scope.tastepreference,
       dietaryrestrictions: $scope.dietaryrestrictions,
@@ -115,7 +113,6 @@ angular.module('menuApp')
       preferredIngredients: $scope.preferredIngredients,
       rejectedIngredients: $scope.rejectedIngredients
     }
-
     menuAppFactory.postUserPreference(preferenceData)
     .then(function(data) {
       // console.log('++line 45 inside restaurantMenu() in restaurantListCtrl', data);c

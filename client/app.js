@@ -42,6 +42,7 @@ angular.module('menuApp', [
   .state('preferenceForm', {
     url: '/preferenceForm',
     templateUrl: '/preferenceForm/preferenceForm.html',
+    controller: 'preferenceFormController',
     authentication: true,
     signedin: true
   });
